@@ -1,0 +1,57 @@
+.__se-container {
+  position: fixed;
+  z-index: 1000000;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Helvetica Nueu';
+}
+
+.__se-circle {
+  position: fixed;
+  z-index: 999999;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at top, #00ff77, transparent),
+              radial-gradient(ellipse at right, #002bff, transparent);
+  box-shadow: 2px 2px 6px 1px rgba(125, 125, 125, 0.8);
+}
+
+.__se-sprite {
+  position: fixed;
+  z-index: 1000001;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  -webkit-animation: flap .4s steps(4) infinite alternate;
+  -moz-animation: flap .4s steps(4) infinite alternate;
+  -ms-animation: flap .4s steps(4) infinite alternate;
+  -o-animation: flap .4s steps(4) infinite alternate;
+  animation: flap .4s steps(4) infinite alternate;
+}
+
+@-webkit-keyframes flap {
+  from { background-position:  0%; }
+  to { background-position: -256px; }
+}
+@-moz-keyframes flap {
+  from { background-position:  0px; }
+  to { background-position: -256px; }
+}
+@-ms-keyframes flap {
+  from { background-position:  0px; }
+  to { background-position: -256px; }
+}
+@-o-keyframes flap {
+  from { background-position:  0px; }
+  to { background-position: -256px; }
+}
+@keyframes flap {
+  from { background-position:  0px; }
+  to { background-position: -256px; }
+}
