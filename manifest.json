@@ -9,7 +9,7 @@
   },
   "content_scripts": [{
     "js": ["src/utils.js", "src/content.js"],
-    "css": ["src/styles.css"],
+    "css": ["styles/content.css"],
     "matches": ["*://www.facebook.com/*"]
   }],
   "web_accessible_resources": ["*.png"]
