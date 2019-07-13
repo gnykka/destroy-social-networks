@@ -1,0 +1,13 @@
+body {
+	min-height: 240px;
+	background-color: $blue;
+	margin: 0;
+	padding: 18px 24px 24px 32px;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: fit-content;
+	margin: 0 auto;
+}

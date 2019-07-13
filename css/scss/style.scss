@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'GetVoIP Grotesque Regular';
+    src: url('fonts/GetVoIPGrotesque.eot');
+    src: url('fonts/GetVoIPGrotesque.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GetVoIPGrotesque.woff') format('woff'),
+        url('fonts/GetVoIPGrotesque.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$blue: #48C7FF;
+
+@import "popup";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
+}
+
+.__se {
+    &-title {
+        font-family: 'GetVoIP Grotesque Regular';
+        text-transform: uppercase;
+        font-size: 25px;
+        display: inline-block;
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        letter-spacing: 4px;
+        margin: 12px 0 6px;
+        z-index: 5;
+        position: relative;
+
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - // T O D A Y S   L E F T
+    &-todays-left {
+    	svg {
+    		margin: -16px 0 0;
+    		#thesun {
+    			transition: 4s;
+    		}
+    	}
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - // C O U N T E R S
+
+    &-counter {
+
+
+        &-tip {
+            margin-top: 18px;
+            font-size: 12px;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        &-value {
+            margin-top: 8px;
+            font-family: 'GetVoIP Grotesque Regular';
+            font-size: 26px;
+        }
+
+        &-value-time {
+            width: 120px;
+            display: inline-block;
+        }
+    }
+
+    // - - - - - - - - - - - - - - - - - - - - - - - // S I L O V O L E M E T R
+
+    &-svm {
+        &-bg {
+            background-image: linear-gradient(90deg, #FF0000 0%, #C319B7 46%, #00FF7F 100%);
+            box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+            border-radius: 10px;
+            height: 120px;
+            width: 260px;
+        }
+
+        #se-svm-pointer {
+            transform-origin: 49% 83%;
+            transition: 3s;
+        }
+
+        .__se-title {
+            margin: 12px 0 8px -5px;
+        }
+
+    }
+
+}

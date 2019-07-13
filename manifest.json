@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
   "name": "Scroll Extension Example",
+  "options_page": "options.html",
   "version": "0.0.1",
   "description": "It's a first simple version",
-  "permissions": ["tabs", "*://www.facebook.com/*"],
+  "permissions": ["tabs", "*://www.facebook.com/*", "storage"],
   "icons": {
     "128": "assets/logo.png"
   },
@@ -12,5 +13,8 @@
     "css": ["styles/content.css"],
     "matches": ["*://www.facebook.com/*"]
   }],
-  "web_accessible_resources": ["*.png"]
+  "web_accessible_resources": ["*.png"],
+   "browser_action": {
+      "default_popup": "popup.html"
+  }
 }

@@ -1,0 +1,1062 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"andro",
+				"androidModels"
+			],
+			[
+				"has",
+				"hasContent"
+			],
+			[
+				"an",
+				"animation"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"temp",
+				"tempTimeLevel"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"color",
+				"colorful"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"after",
+				"afterH"
+			],
+			[
+				"mins",
+				"minsHours"
+			],
+			[
+				"rol",
+				"rollin"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"rollin",
+				"rollinDown"
+			],
+			[
+				"on",
+				"onLocation"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"wa",
+				"warranty"
+			],
+			[
+				"bi",
+				"biggestTime"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"spl",
+				"split"
+			],
+			[
+				"bigg",
+				"biggestTimeLevel"
+			],
+			[
+				"big",
+				"biggestTimeLevel"
+			],
+			[
+				"total",
+				"totalDiscount"
+			],
+			[
+				"remo",
+				"removePlus"
+			],
+			[
+				"Le",
+				"length"
+			],
+			[
+				"sele",
+				"selected"
+			],
+			[
+				"blac",
+				"black-gradient"
+			],
+			[
+				"new",
+				"newObject"
+			],
+			[
+				"flex",
+				"flex-start"
+			],
+			[
+				"seri",
+				"services"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"show",
+				"showModelsOf"
+			],
+			[
+				"selec",
+				"selectedDevice"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"re",
+				"required"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"co",
+				"column"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"bac",
+				"background-size\tproperty"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"content",
+				"contentClass"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"v-",
+				"v-if\t<div v-if=\"\">"
+			],
+			[
+				"recom",
+				"recommend"
+			],
+			[
+				"reco",
+				"recommend"
+			],
+			[
+				"revie",
+				"reviews"
+			],
+			[
+				"product",
+				"productReview"
+			],
+			[
+				"produ",
+				"product-review"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"d",
+				"display\tproperty"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"fad",
+				"fadeIn\t.fadeIn()"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sli",
+				"slider"
+			],
+			[
+				"remove",
+				"removeClass\t.removeClass()"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"for",
+				"form\tTag"
+			],
+			[
+				"tras",
+				"transform"
+			],
+			[
+				"k-",
+				"k-blue"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"backgr",
+				"background-size\tproperty"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"prev",
+				"preview_img"
+			],
+			[
+				"pre",
+				"preview_img"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"border-r",
+				"border-radius\tproperty"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"unde",
+				"underHeader"
+			],
+			[
+				"banne",
+				"banner0"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"mi",
+				"min-width\tproperty"
+			],
+			[
+				"margi",
+				"margin-top\tproperty"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"commen",
+				"comment_text"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"au",
+				"author_link"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"pri",
+				"printf"
+			],
+			[
+				"ite",
+				"Item"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"a",
+				"after"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"siz",
+				"font-size"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"lef",
+				"margin-left\tproperty"
+			],
+			[
+				"mari",
+				"margin-top\tproperty"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"inlin",
+				"inline-block\tdisplay"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 2107,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/options.js",
+			"settings":
+			{
+				"buffer_size": 999,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "popup.html",
+			"settings":
+			{
+				"buffer_size": 12879,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "options.html",
+			"settings":
+			{
+				"buffer_size": 525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/scss/_popup.scss",
+			"settings":
+			{
+				"buffer_size": 193,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"Packages/Rust/Rust.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"View Package File"
+			],
+			[
+				"exp",
+				"Extract Sublime Package: Extract all packages"
+			],
+			[
+				"extrac",
+				"Extract Sublime Package: Extract all packages"
+			],
+			[
+				"View",
+				"View Package File"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"View Package File"
+			],
+			[
+				"build",
+				"Build: Cancel"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packge vie",
+				"View Package File"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Install p",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Install Packager",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"dd",
+			"Install Package",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/makemeunseeit/dev/killer",
+		"/Users/makemeunseeit/dev/killer/assets",
+		"/Users/makemeunseeit/dev/killer/css",
+		"/Users/makemeunseeit/dev/killer/css/scss",
+		"/Users/makemeunseeit/dev/killer/src",
+		"/Users/makemeunseeit/dev/killer/styles"
+	],
+	"file_history":
+	[
+		"/Users/makemeunseeit/dev/killer/options.js",
+		"/Users/makemeunseeit/dev/killer/config.codekit3",
+		"/Users/makemeunseeit/dev/killer/manifest.json",
+		"/Users/makemeunseeit/dev/killer/options.html",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/oDev/tokarua/wp-content/themes/ntk/style.scss",
+		"/Users/makemeunseeit/dev/viscula/src/App.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Header.vue",
+		"/Users/makemeunseeit/dev/viscula/src/components/Welcome.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Discounts.vue",
+		"/Users/makemeunseeit/dev/mstrn/public/index.html",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Footer.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Configurator.vue",
+		"/Users/makemeunseeit/dev/mstrn/public/server/handler-configurator.php",
+		"/Users/makemeunseeit/dev/mstrn/src/views/Home.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/App.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/main.js",
+		"/Users/makemeunseeit/dev/mstrn/src/plugins/axios.js",
+		"/Users/makemeunseeit/dev/mstrn/public/server/handler-header.php",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Warranty.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/Socials.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/FAQ.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/OnlineOrder.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/components/GMap.vue",
+		"/Users/makemeunseeit/dev/mstrn/src/plugins/gmaps.js",
+		"/Users/makemeunseeit/dev/mstrn/src/plugins/global.scss",
+		"/Users/makemeunseeit/dev/mstrn/public/img/logo_white.svg",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/style.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_animations.scss",
+		"/Users/makemeunseeit/dev/mstrn/public/server/index.php",
+		"/Users/makemeunseeit/dev/vue-sandbox/js/main.js",
+		"/Users/makemeunseeit/dev/vue-sandbox/index.html",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_font_exo.scss",
+		"/Users/makemeunseeit/dev/mstrn/src/components/HelloWorld.vue",
+		"/Users/makemeunseeit/machbuy/docker/.env",
+		"/Users/makemeunseeit/machbuy/vendor/ezyang/htmlpurifier/library/HTMLPurifier/URIScheme/tel.php",
+		"/Users/makemeunseeit/machbuy/docker/docker-compose.yml",
+		"/Users/makemeunseeit/machbuy/common/config/main-local.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/style.css",
+		"/Users/makemeunseeit/machbuy/frontend/assets/stylesheets/scss/_header.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/norm.zip",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/index.html",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/config.codekit3",
+		"/Users/makemeunseeit/dev/mms-ex/src/views/Done.vue",
+		"/Users/makemeunseeit/dev/mms/src/views/Done.vue",
+		"/Users/makemeunseeit/dev/mms/src/router.js",
+		"/Users/makemeunseeit/dev/mms/src/App.vue",
+		"/Users/makemeunseeit/dev/mms/babel.config.js",
+		"/Users/makemeunseeit/dev/mms/package-lock.json",
+		"/Users/makemeunseeit/dev/mms/package.json",
+		"/Users/makemeunseeit/dev/mms/README.md",
+		"/Users/makemeunseeit/dev/vue-sandbox/style.css",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/animations.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_donate.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/style.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/comment-form.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_comments.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/landing/partnership.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/counters.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/_home-cv.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/makemeunsee.it/index.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/makemeunsee.it/done.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/single/donate.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/js/etc.min.js",
+		"/Users/makemeunseeit/machbuy/docker/README.md",
+		"/Users/makemeunseeit/machbuy/docker/start_docker.sh",
+		"/Users/makemeunseeit/machbuy/docker/enter_deployer.sh",
+		"/Users/makemeunseeit/machbuy/docker/config.sh",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/machbuy/index.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/single/_single.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/machbuy/style.css",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/machbuy/js/main.js",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/machbuy/machbuy/frontend/assets/stylesheets/scss/_base.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/index.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_vars.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/eilatan/outside/dark-carnaval/ index.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/outside/dark-carnaval/style.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/outside/dark-carnaval/ index.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/page-fullwidth.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/wp-config.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/wp-settings.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/single.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/sticky.js",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/author.php",
+		"/Users/makemeunseeit/Dropbox/olav/sirvision.de 3_2_19/wordpress/wp-config.php",
+		"/Users/makemeunseeit/Dropbox/olav/full_dump_3_2_19.sql",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-3/wp-config.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/error_log",
+		"/Users/makemeunseeit/Downloads/Ftp olavschr.xml",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_home.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/landings/about-us.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/landing/about-us.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/journalists.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/done.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/portfolio.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/single-portfolio.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/single.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_footer.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/landings/donate.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/single/_header.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/single/related-list.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/footer.php",
+		"/Volumes/Acrobat DC/Acrobat DC/ignore_AAM.xml",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/functions.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/header.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/style.css",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_font_emoji.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_font.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/makemeunsee.it/test/index_dump.html",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/makemeunsee.it/test/index.html",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_journalists.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/js/jquery.js",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/makemeunsee.it/css/style.css",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/banners.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_banners.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_single.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/landing/donate.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_landing-pages.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/scss/_ad_landing.scss",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/inc/ad-landing.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-content/themes/ntk/page.php",
+		"/Applications/Adobe Photoshop CC 2018/Plug-ins/Generator/io.zeplin.photoshop-plugin/node_modules/lodash/every.js",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/style 2.css",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/content-single-product.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/functions.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/product.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/title.php",
+		"/private/var/folders/_v/_sczp46951g530t0tzy8n0kr0000gn/T/fz3temp-2/short-description.php",
+		"/Users/makemeunseeit/Library/Mobile Documents/com~apple~CloudDocs/Dev/tokarua/wp-config.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 115.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"thes",
+			"voip",
+			"font",
+			"120px",
+			";\n",
+			"width",
+			"css"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/makemeunseeit/dev/killer"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								401
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/options.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "popup.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4588,
+								4588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "options.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								508,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/scss/_popup.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 239.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 384.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1086.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
