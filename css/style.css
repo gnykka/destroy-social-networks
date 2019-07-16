@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'GetVoIP Grotesque Regular';
   src: url("fonts/GetVoIPGrotesque.eot");
@@ -9,13 +10,119 @@ body {
   min-height: 240px;
   background-color: #48C7FF;
   margin: 0;
-  padding: 18px 24px 24px 32px;
+  padding: 18px 32px 24px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 .container {
   width: fit-content;
   margin: 0 auto; }
+
+.page-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.__se-options-body {
+  background: black;
+  color: white; }
+
+.__se-options-heading {
+  font-family: 'GetVoIP Grotesque Regular';
+  display: flex;
+  width: 100%;
+  height: 48px;
+  justify-content: space-between; }
+
+.__se-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: black;
+  height: 140px;
+  overflow: hidden;
+  box-shadow: 0 0 27px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  margin-bottom: -48px;
+  transform: perspective(20px) rotateX(-1.5deg) scale(0.8);
+  cursor: pointer; }
+  .__se-tab-body {
+    padding: 24px 36px; }
+    .__se-tab-body-main {
+      display: flex;
+      flex-direction: column; }
+      .__se-tab-body-main-title.__se-title {
+        font-size: 48px;
+        margin-bottom: 18px !important; }
+    .__se-tab-body-description {
+      position: relative;
+      width: 100px;
+      display: block;
+      text-transform: none;
+      font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
+      letter-spacing: 0px;
+      font-size: 12px;
+      color: #000000;
+      font-weight: 100; }
+      .__se-tab-body-description:before {
+        content: "—";
+        position: absolute;
+        font-weight: 600;
+        left: -20px;
+        top: -2px; }
+  .__se-tab h2 {
+    font-family: 'GetVoIP Grotesque Regular';
+    margin: 12px 0;
+    display: block;
+    padding: 8px 0 12px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+  .__se-tab#rating {
+    background: #92FFB3; }
+  .__se-tab#analytics {
+    background: #48C7FF; }
+  .__se-tab-open {
+    overflow: scroll;
+    position: absolute;
+    top: 280px;
+    width: 800px;
+    cursor: inherit;
+    transform: rotateX(0);
+    border-radius: 0px;
+    min-height: 100vh;
+    order: 4 !important;
+    transform: perspective(0) rotateX(0) scale(1);
+    z-index: 10;
+    transition: 1s; }
+  .__se-tab-settings-allowed-time label {
+    font-size: 14px;
+    margin-right: 18px; }
+  .__se-tab-settings-bad-sites {
+    margin: 18px 0; }
+    .__se-tab-settings-bad-sites textarea {
+      background: #FF0000;
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+      border: 0px;
+      border-radius: 10px;
+      font-size: 24px;
+      font-weight: 200;
+      height: 120px;
+      width: 640px;
+      padding: 12px 16px; }
+  .__se-tab-analytics {
+    margin: 0 0 0 -24px; }
+    .__se-tab-analytics .__se-svm {
+      display: flex; }
+      .__se-tab-analytics .__se-svm .__se-tab-body-description {
+        margin: 10px 0 0 36px; }
+    .__se-tab-analytics svg {
+      transform: scale(1.8);
+      transform-origin: 0% 0%; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif; }
@@ -24,7 +131,7 @@ body {
   font-family: 'GetVoIP Grotesque Regular';
   text-transform: uppercase;
   font-size: 25px;
-  display: inline-block;
+  display: block;
   color: transparent;
   -webkit-text-stroke: 1px #000;
   letter-spacing: 4px;
@@ -32,37 +139,43 @@ body {
   z-index: 5;
   position: relative; }
 
-.__se-todays-left svg {
-  margin: -16px 0 0; }
-  .__se-todays-left svg #thesun {
-    transition: 4s; }
+.__se-todays-left {
+  text-align: center; }
+  .__se-todays-left svg {
+    margin: -16px 0 0; }
+    .__se-todays-left svg #thesun {
+      transition: 4s; }
 
-.__se-counter-tip {
-  margin-top: 18px;
-  font-size: 12px;
-  font-weight: 200;
-  letter-spacing: 3px;
-  text-transform: uppercase; }
+.__se-counter {
+  text-align: center; }
+  .__se-counter-tip {
+    margin-top: 18px;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase; }
+  .__se-counter-value {
+    margin-top: 8px;
+    font-family: 'GetVoIP Grotesque Regular';
+    font-size: 26px;
+    text-align: center; }
+    .__se-counter-value span {
+      text-transform: none;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 0px;
+      text-align: center;
+      color: rgba(208, 2, 27, 0.9); }
 
-.__se-counter-value {
-  margin-top: 8px;
-  font-family: 'GetVoIP Grotesque Regular';
-  font-size: 26px; }
-
-.__se-counter-value-time {
-  width: 120px;
-  display: inline-block; }
-
-.__se-svm-bg {
-  background-image: linear-gradient(90deg, #FF0000 0%, #C319B7 46%, #00FF7F 100%);
-  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  height: 120px;
-  width: 260px; }
-
-.__se-svm #se-svm-pointer {
-  transform-origin: 49% 83%;
-  transition: 3s; }
-
-.__se-svm .__se-title {
-  margin: 12px 0 8px -5px; }
+.__se-svm {
+  margin: 24px -12px 36px 0; }
+  .__se-svm-bg {
+    background-image: linear-gradient(90deg, #FF0000 0%, #C319B7 46%, #00FF7F 100%);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 120px;
+    width: 260px; }
+  .__se-svm #se-svm-pointer {
+    transform-origin: 49% 83%;
+    transition: 3s; }
+  .__se-svm .__se-title {
+    margin: 12px 0 8px -5px; }

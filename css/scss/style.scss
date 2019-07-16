@@ -9,11 +9,20 @@
 }
 
 $blue: #48C7FF;
+$red: #D0021B;
+$ff-default: -apple-system,
+BlinkMacSystemFont,
+Helvetica Neue,
+Helvetica,
+Segoe,
+Arial,
+sans-serif;
 
 @import "popup";
+@import "options";
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
+    font-family: $ff-default;
 }
 
 .__se {
@@ -21,7 +30,7 @@ body {
         font-family: 'GetVoIP Grotesque Regular';
         text-transform: uppercase;
         font-size: 25px;
-        display: inline-block;
+        display: block;
         color: transparent;
         -webkit-text-stroke: 1px #000;
         letter-spacing: 4px;
@@ -33,18 +42,21 @@ body {
 
     // - - - - - - - - - - - - - - - - - - - - - - - // T O D A Y S   L E F T
     &-todays-left {
-    	svg {
-    		margin: -16px 0 0;
-    		#thesun {
-    			transition: 4s;
-    		}
-    	}
+        text-align: center;
+
+        svg {
+            margin: -16px 0 0;
+
+            #thesun {
+                transition: 4s;
+            }
+        }
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - // C O U N T E R S
 
     &-counter {
-
+        text-align: center;
 
         &-tip {
             margin-top: 18px;
@@ -58,17 +70,24 @@ body {
             margin-top: 8px;
             font-family: 'GetVoIP Grotesque Regular';
             font-size: 26px;
+            text-align: center;
+            
+            span {
+                text-transform: none;
+                letter-spacing: 2px;
+                -webkit-text-stroke: 0px;
+                text-align: center;
+                color: rgba($red, .9);
+            }
         }
 
-        &-value-time {
-            width: 120px;
-            display: inline-block;
-        }
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - // S I L O V O L E M E T R
 
     &-svm {
+        margin: 24px -12px 36px 0;
+
         &-bg {
             background-image: linear-gradient(90deg, #FF0000 0%, #C319B7 46%, #00FF7F 100%);
             box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
