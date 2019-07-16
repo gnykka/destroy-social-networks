@@ -21,16 +21,16 @@
 .__se-sprite {
   position: fixed;
   z-index: 1000001;
-  width: 64px;
-  height: 64px;
-  bottom: 40px;
-  left: 100px;
+  width: 200px;
+  height: 293px;
+  bottom: 10px;
+  left: 30px;
   background-repeat: no-repeat;
-  -webkit-animation: fly .4s steps(4) infinite alternate;
-  -moz-animation: fly .4s steps(4) infinite alternate;
-  -ms-animation: fly .4s steps(4) infinite alternate;
-  -o-animation: fly .4s steps(4) infinite alternate;
-  animation: fly .4s steps(4) infinite alternate;
+  -webkit-animation: serf 1.8s steps(24) infinite;
+  -moz-animation: serf 1.8s steps(24) infinite;
+  -ms-animation: serf 1.8s steps(24) infinite;
+  -o-animation: serf 1.8s steps(24) infinite;
+  animation: serf 1.8s steps(24) infinite;
   transition: opacity 400ms;
 }
 
@@ -43,23 +43,23 @@
   animation: none;
 }
 
-@-webkit-keyframes fly {
+@-webkit-keyframes serf {
   from { background-position:  0%; }
-  to { background-position: -256px; }
+  to { background-position: -4800px; }
 }
-@-moz-keyframes fly {
+@-moz-keyframes serf {
   from { background-position:  0px; }
-  to { background-position: -256px; }
+  to { background-position: -4800px; }
 }
-@-ms-keyframes fly {
+@-ms-keyframes serf {
   from { background-position:  0px; }
-  to { background-position: -256px; }
+  to { background-position: -4800px; }
 }
-@-o-keyframes fly {
+@-o-keyframes serf {
   from { background-position:  0px; }
-  to { background-position: -256px; }
+  to { background-position: -4800px; }
 }
-@keyframes fly {
+@keyframes serf {
   from { background-position:  0px; }
-  to { background-position: -256px; }
+  to { background-position: -4800px; }
 }
