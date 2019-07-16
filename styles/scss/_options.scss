@@ -17,7 +17,6 @@
         width: 100%;
         height: 48px;
         justify-content: space-between;
-
     }
 
     &-tab {
@@ -49,7 +48,6 @@
 
             &-description {
                 position: relative;
-
                 width: 100px;
                 display: block;
                 text-transform: none;
@@ -85,12 +83,10 @@
 
         &#rating {
             background: #92FFB3;
-
         }
 
         &#analytics {
             background: #48C7FF;
-
         }
 
 
@@ -137,10 +133,10 @@
         &-analytics {
             margin: 0 0 0 -24px;
             .__se-svm {
-            	display: flex;
-            .__se-tab-body-description {
-            	margin: 10px 0 0 36px;
-            }
+                display: flex;
+                .__se-tab-body-description {
+                    margin: 10px 0 0 36px;
+                }
             }
             svg {
                 transform: scale(1.8);

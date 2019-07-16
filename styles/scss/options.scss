@@ -1,25 +1,19 @@
+@import "popup";
+@import "options";
+
 @font-face {
     font-family: 'GetVoIP Grotesque Regular';
-    src: url('fonts/GetVoIPGrotesque.eot');
-    src: url('fonts/GetVoIPGrotesque.eot?#iefix') format('embedded-opentype'),
-        url('fonts/GetVoIPGrotesque.woff') format('woff'),
-        url('fonts/GetVoIPGrotesque.ttf') format('truetype');
+    src: url('../assets/fonts/GetVoIPGrotesque.eot');
+    src: url('../assets/fonts/GetVoIPGrotesque.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/GetVoIPGrotesque.woff') format('woff'),
+        url('../assets/fonts/GetVoIPGrotesque.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 $blue: #48C7FF;
 $red: #D0021B;
-$ff-default: -apple-system,
-BlinkMacSystemFont,
-Helvetica Neue,
-Helvetica,
-Segoe,
-Arial,
-sans-serif;
-
-@import "popup";
-@import "options";
+$ff-default: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
 
 body {
     font-family: $ff-default;
@@ -37,7 +31,6 @@ body {
         margin: 12px 0 6px;
         z-index: 5;
         position: relative;
-
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - // T O D A Y S   L E F T
@@ -54,7 +47,6 @@ body {
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - // C O U N T E R S
-
     &-counter {
         text-align: center;
 
@@ -71,7 +63,7 @@ body {
             font-family: 'GetVoIP Grotesque Regular';
             font-size: 26px;
             text-align: center;
-            
+
             span {
                 text-transform: none;
                 letter-spacing: 2px;
@@ -84,7 +76,6 @@ body {
     }
 
     // - - - - - - - - - - - - - - - - - - - - - - - // S I L O V O L E M E T R
-
     &-svm {
         margin: 24px -12px 36px 0;
 
@@ -104,7 +95,5 @@ body {
         .__se-title {
             margin: 12px 0 8px -5px;
         }
-
     }
-
 }

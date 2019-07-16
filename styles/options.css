@@ -1,8 +1,10 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'GetVoIP Grotesque Regular';
-  src: url("fonts/GetVoIPGrotesque.eot");
-  src: url("fonts/GetVoIPGrotesque.eot?#iefix") format("embedded-opentype"), url("fonts/GetVoIPGrotesque.woff") format("woff"), url("fonts/GetVoIPGrotesque.ttf") format("truetype");
+  src: url("../assets/fonts/GetVoIPGrotesque.eot");
+  src: url("../assets/fonts/GetVoIPGrotesque.eot?#iefix") format("embedded-opentype"),
+       url("../assets/fonts/GetVoIPGrotesque.woff") format("woff"),
+       url("../assets/fonts/GetVoIPGrotesque.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 

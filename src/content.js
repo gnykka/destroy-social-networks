@@ -15,7 +15,7 @@ document.body.appendChild(sticker);
 
 // creater toaster
 const sprite = document.createElement('div');
-const toaster = chrome.extension.getURL('assets/toaster.png');
+const toaster = chrome.extension.getURL('assets/images/toaster.png');
 sprite.className = '__se-sprite';
 sprite.style['background-image'] = `url('${toaster}')`;
 document.body.appendChild(sprite);

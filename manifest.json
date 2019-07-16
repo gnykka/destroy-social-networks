@@ -6,7 +6,7 @@
   "description": "It's a first simple version",
   "permissions": ["tabs", "*://www.facebook.com/*", "storage"],
   "icons": {
-    "128": "assets/logo.png"
+    "128": "assets/images/logo.png"
   },
   "content_scripts": [{
     "js": ["src/utils.js", "src/content.js"],
