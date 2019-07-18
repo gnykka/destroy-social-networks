@@ -7,17 +7,22 @@ const toasterAnimationTime = 500;
 
 let sticker, sprite, serfer;
 
+let today = new Date();
+let dateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
+
 // get scroll and time values
 let scroll, fullScroll;
 let time, fullTime;
 let prevScrollTop = 0;
+let prevTime = today.getTime();
 
-let today = new Date();
-let dateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
-
-chrome.storage.sync.get(['scroll', 'full_scroll'], (items) => {
+chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime'], (items) => {
   scroll = items.scroll || 0;
-  fullScroll = items.full_scroll || 0;
+  fullScroll = items.fullScroll || 0;
+  time = items.time || 0;
+  fullTime = items.fullTime || 0;
+
+  console.log(scroll, fullScroll, time, fullTime);
 });
 
 // write new values to storage
@@ -25,12 +30,18 @@ const storageTimer = setInterval(() => {
   today = new Date();
   const nextDateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
 
+  const delta = today.getTime() - prevTime;
+  time += delta;
+  fullTime += delta;
+  prevTime = today.getTime();
+
   if (nextDateTime > dateTime) {
     scroll = 0;
+    time = 0;
     dateTime = nextDateTime;
   }
 
-  chrome.storage.sync.set({ scroll: scroll, full_scroll: fullScroll });
+  chrome.storage.sync.set({ scroll, fullScroll, time, fullTime });
 }, storageUpdateTime);
 
 const onScroll = debounce((event) => {
