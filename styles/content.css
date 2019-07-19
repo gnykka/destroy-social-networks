@@ -26,12 +26,15 @@
   bottom: 10px;
   left: 30px;
   background-repeat: no-repeat;
-  -webkit-animation: serf 1.8s steps(24) infinite;
-  -moz-animation: serf 1.8s steps(24) infinite;
-  -ms-animation: serf 1.8s steps(24) infinite;
-  -o-animation: serf 1.8s steps(24) infinite;
-  animation: serf 1.8s steps(24) infinite;
   transition: opacity 400ms;
+}
+
+.__se-sprite-happy, .__se-sprite-happy-talk {
+  -webkit-animation: serf 1s steps(24) infinite;
+  -moz-animation: serf 1s steps(24) infinite;
+  -ms-animation: serf 1s steps(24) infinite;
+  -o-animation: serf 1s steps(24) infinite;
+  animation: serf 1s steps(24) infinite;
 }
 
 .__se-sprite.hidden {

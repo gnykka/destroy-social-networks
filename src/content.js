@@ -1,11 +1,14 @@
 let phase = 0;
 const times = [10000, 10000, 10000, 10000]; // in ms
 
+// 1 фаза — улыбающийся серфер
+// 2 фаза
+
 const storageUpdateTime = 5000;
 const stickerVisibleTime = 2000;
 const toasterAnimationTime = 500;
 
-let sticker, sprite, serfer;
+let sticker, sprite;
 
 let today = new Date();
 let dateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
@@ -54,7 +57,7 @@ const onScroll = debounce((event) => {
 }, this);
 
 const onUnload = () => {
-  window.removeEventListener(onScroll);
+  window.removeEventListener('scroll', onScroll);
   clearInterval(storageTimer);
 }
 
@@ -67,9 +70,11 @@ const renderResources = () => {
 
   // create serfer
   sprite = document.createElement('div');
-  serfer = chrome.extension.getURL('assets/images/serf-1.png');
-  sprite.className = '__se-sprite';
-  sprite.style['background-image'] = `url('${serfer}')`;
+  sprite.className = '__se-sprite __se-sprite-happy';
+
+  const image = chrome.extension.getURL('assets/images/serf-1.png');
+  sprite.style['background-image'] = `url('${image}')`;
+
   document.body.appendChild(sprite);
 }
 
@@ -87,6 +92,12 @@ const firstPhase = () => {
 const secondPhase = () => {
   phase += 1;
   showSticker('Закончилась первая фаза, начало второй фазы');
+
+  const image = chrome.extension.getURL('assets/images/serf-2.png');
+  sprite.style['background-image'] = `url('${image}')`;
+  sprite.classList.add('__se-sprite-happy-talk');
+  sprite.classList.remove('__se-sprite-happy');
+
   setTimeout(thirdPhase, times[phase]);
 };
 
