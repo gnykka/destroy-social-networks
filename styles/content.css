@@ -29,12 +29,24 @@
   transition: opacity 400ms;
 }
 
-.__se-sprite-happy, .__se-sprite-happy-talk {
+.__se-sprite-happy,
+.__se-sprite-happy-talk,
+.__se-sprite-conserned,
+.__se-sprite-sad,
+.__se-sprite-shark {
   -webkit-animation: serf 1s steps(24) infinite;
   -moz-animation: serf 1s steps(24) infinite;
   -ms-animation: serf 1s steps(24) infinite;
   -o-animation: serf 1s steps(24) infinite;
   animation: serf 1s steps(24) infinite;
+}
+
+.__se-sprite-happy-transition {
+  -webkit-animation: serf-transition 1s steps(21) infinite;
+  -moz-animation: serf-transition 1s steps(21) infinite;
+  -ms-animation: serf-transition 1s steps(21) infinite;
+  -o-animation: serf-transition 1s steps(21) infinite;
+  animation: serf-transition 1s steps(21) infinite;
 }
 
 .__se-sprite.hidden {
@@ -65,4 +77,25 @@
 @keyframes serf {
   from { background-position:  0px; }
   to { background-position: -4800px; }
+}
+
+@-webkit-keyframes serf-transition {
+  from { background-position:  0%; }
+  to { background-position: -4200px; }
+}
+@-moz-keyframes serf-transition {
+  from { background-position:  0px; }
+  to { background-position: -4200px; }
+}
+@-ms-keyframes serf-transition {
+  from { background-position:  0px; }
+  to { background-position: -4200px; }
+}
+@-o-keyframes serf-transition {
+  from { background-position:  0px; }
+  to { background-position: -4200px; }
+}
+@keyframes serf-transition {
+  from { background-position:  0px; }
+  to { background-position: -4200px; }
 }
