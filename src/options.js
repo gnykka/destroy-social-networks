@@ -27,7 +27,7 @@ const changeTab = (index) => {
 
 // - - - - - - - - - - - - - // bad sites
 
-let badSites = ['https://facebook.com', 'makemeunsee.it', 'google.com']; //'https://i.olsh.me/allicons.json?url='+badSites[i],
+let badSites = ['https://facebook.com', 'makemeunsee.it', 'google.com'];
 let badSitesInput = document.getElementById('bad-sites-pseudoTextArea-input');
 let badSitesList = document.getElementById('bad-sites-pseudoTextArea-stoplist');
 

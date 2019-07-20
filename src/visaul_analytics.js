@@ -1,7 +1,10 @@
 const dailyNorm = 60;
 const msInMin = 1000 * 60; // ms * sec
 
-let spentToday = 0;
+let spentToday = {
+  time:0,
+  scroll: 0,
+};
 let svmPointer, todaysTheSun;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,18 +13,20 @@ window.addEventListener('DOMContentLoaded', () => {
   svmPointer.style['transform'] = 'rotate(58deg)';
 
 
-  chrome.storage.sync.get(['time'], (items) => {
-    spentToday = Math.round((items.time || 0) / msInMin);
+  chrome.storage.sync.get(['time', 'scroll'], (items) => {
+    spentToday.time = Math.round((items.time || 0) / msInMin);
+    spentToday.scroll = items.scroll ;
 
     svmSetPointer();
     setTodaysTheSun();
+    setTodaysLoose();
   });
 });
 
 const svmSetPointer = () => {
-  if (spentToday > 0) {
+  if (spentToday.time > 0) {
     const dailyNormPercent = dailyNorm / 100;
-    let spentTodayPercent = (spentToday - dailyNorm) / dailyNormPercent;
+    let spentTodayPercent = (spentToday.time - dailyNorm) / dailyNormPercent;
     const svmPercent = -spentTodayPercent * 0.58; // 58deg — max in SiloVoleMetr
 
     if (spentTodayPercent > 100) {
@@ -33,7 +38,7 @@ const svmSetPointer = () => {
 
 const setTodaysTheSun = () => {
   const sunPosition = (spentToday / (dailyNorm / 100)) * 2.38;
-  let todaysLeftMins = dailyNorm - spentToday;
+  let todaysLeftMins = dailyNorm - spentToday.time;
 
   if (todaysLeftMins < 0) {
     todaysLeftMins = 0;
@@ -41,6 +46,10 @@ const setTodaysTheSun = () => {
   todaysTheSun.style['transform'] = `translateY(${sunPosition}px)`;
   document.querySelector('#todays-left-value').textContent = `${todaysLeftMins} мин`;
 };
+
+const setTodaysLoose = () => {
+  document.querySelector('.__se-counter-value-time').textContent = spentToday.scroll;
+}
 
 // function getDate() {
 //   var date = new Date();
@@ -53,7 +62,3 @@ const setTodaysTheSun = () => {
 //   document.getElementById('timedisplay').innerHTML = hours + ':' + minutes + ':' + seconds;
 // }
 // setInterval(getDate, 0);
-
-// - - - - - - - - - - - - - // S E T T I N G S
-
-// - - - - - - - - - - - - - // slider

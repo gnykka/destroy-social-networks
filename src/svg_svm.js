@@ -1,4 +1,5 @@
-document.getElementById('se-svm').innerHTML=`<defs>
+document.getElementById('se-svm').innerHTML = `
+<defs>
     <linearGradient id="a" x1="0%" y1="75.7750833%" y2="75.7750833%">
         <stop offset="0%" stop-color="red" />
         <stop offset="45.5693701%" stop-color="#C319B7" />
