@@ -1,6 +1,3 @@
-@import "popup";
-@import "options";
-
 @font-face {
     font-family: 'GetVoIP Grotesque Regular';
     src: url('../assets/fonts/GetVoIPGrotesque.eot');
@@ -15,9 +12,13 @@ $blue: #48C7FF;
 $red: #D0021B;
 $ff-default: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
 
+@import "popup";
+@import "options";
+
 body {
     font-family: $ff-default;
 }
+
 
 .__se {
     &-title {
