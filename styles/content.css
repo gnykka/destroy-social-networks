@@ -22,11 +22,31 @@
   position: fixed;
   z-index: 1000001;
   width: 200px;
-  height: 293px;
-  bottom: 10px;
+  bottom: 30px;
   left: 30px;
   background-repeat: no-repeat;
+  background-position: left bottom;
   transition: opacity 400ms;
+}
+
+.__se-sprite-happy,
+.__se-sprite-happy-talk,
+.__se-sprite-sad {
+  height: 191px;
+}
+
+.__se-sprite-happy-transition,
+.__se-sprite-conserned,
+.__se-sprite-concerned-transition {
+  height: 188px;
+}
+
+.__se-sprite-sad-transition {
+  height: 250px;
+}
+
+.__se-sprite-shark {
+  height: 201px;
 }
 
 .__se-sprite-happy,
@@ -41,12 +61,21 @@
   animation: serf 1s steps(24) infinite;
 }
 
-.__se-sprite-happy-transition {
+.__se-sprite-happy-transition,
+.__se-sprite-concerned-transition {
   -webkit-animation: serf-transition 1s steps(21) infinite;
   -moz-animation: serf-transition 1s steps(21) infinite;
   -ms-animation: serf-transition 1s steps(21) infinite;
   -o-animation: serf-transition 1s steps(21) infinite;
   animation: serf-transition 1s steps(21) infinite;
+}
+
+.__se-sprite-sad-transition {
+  -webkit-animation: serf-transition-long 2s steps(49) infinite;
+  -moz-animation: serf-transition-long 2s steps(49) infinite;
+  -ms-animation: serf-transition-long 2s steps(49) infinite;
+  -o-animation: serf-transition-long 2s steps(49) infinite;
+  animation: serf-transition-long 2s steps(49) infinite;
 }
 
 .__se-sprite.hidden {
@@ -98,4 +127,25 @@
 @keyframes serf-transition {
   from { background-position:  0px; }
   to { background-position: -4200px; }
+}
+
+@-webkit-keyframes serf-transition-long {
+  from { background-position:  0%; }
+  to { background-position: -9800px; }
+}
+@-moz-keyframes serf-transition-long {
+  from { background-position:  0px; }
+  to { background-position: -9800px; }
+}
+@-ms-keyframes serf-transition-long {
+  from { background-position:  0px; }
+  to { background-position: -9800px; }
+}
+@-o-keyframes serf-transition-long {
+  from { background-position:  0px; }
+  to { background-position: -9800px; }
+}
+@keyframes serf-transition-long {
+  from { background-position:  0px; }
+  to { background-position: -9800px; }
 }
