@@ -31,12 +31,14 @@
 
 .__se-sprite-happy,
 .__se-sprite-happy-talk,
-.__se-sprite-sad {
+.__se-sprite-sad,
+.__se-sprite-sad-talk {
   height: 191px;
 }
 
 .__se-sprite-happy-transition,
 .__se-sprite-conserned,
+.__se-sprite-conserned-talk,
 .__se-sprite-concerned-transition {
   height: 188px;
 }
@@ -52,7 +54,9 @@
 .__se-sprite-happy,
 .__se-sprite-happy-talk,
 .__se-sprite-conserned,
+.__se-sprite-conserned-talk,
 .__se-sprite-sad,
+.__se-sprite-sad-talk,
 .__se-sprite-shark {
   -webkit-animation: serf 1s steps(24) infinite;
   -moz-animation: serf 1s steps(24) infinite;
