@@ -1,10 +1,12 @@
 const dailyNorm = 60;
+const pxInM = 3800;
 const msInMin = 1000 * 60; // ms * sec
 
 let spentToday = {
   time:0,
   scroll: 0,
 };
+
 let svmPointer, todaysTheSun;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -13,9 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
   svmPointer.style['transform'] = 'rotate(58deg)';
 
 
-  chrome.storage.sync.get(['time', 'scroll'], (items) => {
+  chrome.storage.sync.get(['time', 'scroll', 'fullTime', 'fullScroll'], (items) => {
     spentToday.time = Math.round((items.time || 0) / msInMin);
-    spentToday.scroll = items.scroll ;
+    spentToday.scroll = Math.round((items.scroll || 0) / pxInM);
 
     svmSetPointer();
     setTodaysTheSun();
@@ -37,7 +39,7 @@ const svmSetPointer = () => {
 };
 
 const setTodaysTheSun = () => {
-  const sunPosition = (spentToday / (dailyNorm / 100)) * 2.38;
+  const sunPosition = (spentToday.time / (dailyNorm / 100)) * 2.38;
   let todaysLeftMins = dailyNorm - spentToday.time;
 
   if (todaysLeftMins < 0) {
@@ -48,7 +50,8 @@ const setTodaysTheSun = () => {
 };
 
 const setTodaysLoose = () => {
-  document.querySelector('.__se-counter-value-time').textContent = spentToday.scroll;
+  document.querySelector('.__se-counter-value-time').textContent = spentToday.time+'мин';
+  document.querySelector('.__se-counter-value-scroll').textContent = spentToday.scroll+'м';
 }
 
 // function getDate() {
