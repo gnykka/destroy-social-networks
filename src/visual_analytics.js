@@ -1,4 +1,4 @@
-const dailyNorm = 60;
+let dailyNorm = 60;
 const pxInM = 3800;
 const msInMin = 1000 * 60; // ms * sec
 
@@ -15,9 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
   svmPointer.style['transform'] = 'rotate(58deg)';
 
 
-  chrome.storage.sync.get(['time', 'scroll', 'fullTime', 'fullScroll'], (items) => {
+  chrome.storage.sync.get(['time', 'scroll', 'fullTime', 'fullScroll', 'timeLimit'], (items) => {
     spentToday.time = Math.round((items.time || 0) / msInMin);
     spentToday.scroll = Math.round((items.scroll || 0) / pxInM);
+    dailyNorm = items.timeLimit;
 
     svmSetPointer();
     setTodaysTheSun();

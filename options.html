@@ -26,21 +26,21 @@
         <section class="__se-tab " id="settings">
             <h2>Настройки</h2>
             <div class="__se-tab-body __se-tab-settings">
-                <div class="__se-tab-settings-allowed-time">
+                <form name="timeLimitForm" class="__se-tab-settings-allowed-time">
                     <span class="__se-tab-body-main-title __se-title">Лимит времени</span>
-                    <input type="radio" id="timeTfalse" name="allowed-time" value="false">
-                    <label for="timeTfalse">⨉</label>
-                    <input type="radio" id="timeT10" name="allowed-time" value="10" checked>
+                    <!-- <input type="radio" id="timeTfalse" name="timeLimit" value="false">
+                    <label for="timeTfalse">⨉</label> -->
+                    <input type="radio" id="timeT10" name="timeLimit" value="10" checked>
                     <label for="timeT10">10 мин­</label>
-                    <input type="radio" id="timeT30" name="allowed-time" value="15">
+                    <input type="radio" id="timeT30" name="timeLimit" value="30">
                     <label for="timeT30">30 мин</label>
-                    <input type="radio" id="timeT60" name="allowed-time" value="60">
+                    <input type="radio" id="timeT60" name="timeLimit" value="60">
                     <label for="timeT60">1 час</label>
-                    <input type="radio" id="timeT120" name="allowed-time" value="120">
+                    <input type="radio" id="timeT120" name="timeLimit" value="120">
                     <label for="timeT120">2 часа</label>
-                    <input type="radio" id="timeTtrue" name="allowed-time" value="true">
-                    <label for="timeTtrue">∞</label>
-                </div>
+                    <!-- <input type="radio" id="timeTtrue" name="timeLimit" value="unlim">
+                    <label for="timeTtrue">∞</label> -->
+                </form>
                 <div class="__se-tab-settings-bad-sites">
                     <span class="__se-tab-body-main-title __se-title">Вредные сайты</span>
                     <div class="__se-tab-settings-bad-sites-pseudoTextArea">

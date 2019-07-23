@@ -27,24 +27,35 @@ const changeTab = (index) => {
 
 
 let badSites = [];
-let timeLimit = 0;
+let timeLimit = 10;
+let timeLimitRadios = document.timeLimitForm.timeLimit;
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
     chrome.storage.sync.get(['badSites', 'timeLimit'], (items) => {
         badSites = items.badSites || [];
-        timeLimit = items.timeLimit || 15;
-        console.log(1);
+        timeLimit = items.timeLimit || 10;
         displayBadSites();
+            for (let i = 0; i<timeLimitRadios.length; i++) {
+      console.log(timeLimitRadios[i].value+' vs. '+timeLimit);
+      if (timeLimitRadios[i].value==timeLimit) {
+        timeLimitRadios[i].checked = true;
+      }
+      timeLimitRadios[i].addEventListener('change', function() {
+        timeLimit=this.value;
+        chrome.storage.sync.set({ timeLimit });
+      });
+    }
     }, )
    
 });
+
+// - - - - - - - - - - - - - // time limit
 
 
 
 // - - - - - - - - - - - - - // bad sites
 
-//let badSites = ['https://facebook.com', 'makemeunsee.it', 'google.com'];
 let badSitesInput = document.getElementById('bad-sites-pseudoTextArea-input');
 let badSitesList = document.getElementById('bad-sites-pseudoTextArea-stoplist');
 
