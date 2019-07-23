@@ -30,11 +30,7 @@ const svmSetPointer = () => {
   if (spentToday.time > 0) {
     const dailyNormPercent = dailyNorm / 100;
     let spentTodayPercent = (spentToday.time - dailyNorm) / dailyNormPercent;
-    const svmPercent = -spentTodayPercent * 0.58; // 58deg — max in SiloVoleMetr
-
-    if (spentTodayPercent > 100) {
-      spentTodayPercent = 100;
-    }
+    const svmPercent = (spentTodayPercent < 100 ? -spentTodayPercent : -100) * 0.57; // 57deg — max in SiloVoleMetr
     svmPointer.style['transform'] = `rotate(${svmPercent}deg)`;
   }
 };
