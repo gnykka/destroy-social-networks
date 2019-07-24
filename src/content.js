@@ -1,11 +1,40 @@
-let phase = 0;
-const times = [20000, 40000, 20000]; // in ms
+let index = -1;
+
+const phases = [
+  {
+    time: 20000,
+    image: 'assets/images/serf-1-happy.png',
+    className: '__se-sprite-happy',
+    talkImage: 'assets/images/serf-2-happy-talk.png',
+    talkClassName: '__se-sprite-happy-talk',
+    text: 'фаза 1',
+    transitionImage: 'assets/images/serf-3-happy-transition.png',
+    transitionClassName: '__se-sprite-happy-transition',
+  }, {
+    time: 40000,
+    image: 'assets/images/serf-4-concerned.png',
+    className: '__se-sprite-conserned',
+    talkImage: 'assets/images/serf-5-concerned-talk.png',
+    talkClassName: '__se-sprite-concerned-talk',
+    text: 'фаза 2',
+    transitionImage: 'assets/images/serf-6-concerned-transition.png',
+    transitionClassName: '__se-sprite-conserned-transition',
+  }, {
+    time: 20000,
+    image: 'assets/images/serf-7-sad.png',
+    className: '__se-sprite-sad',
+    talkImage: 'assets/images/serf-8-sad-talk.png',
+    talkClassName: '__se-sprite-sad-talk',
+    text: 'фаза 3',
+    transitionImage: 'assets/images/serf-9-sad-transition.png',
+    transitionClassName: '__se-sprite-sad-transition',
+  }, {
+    image: 'assets/images/serf-10-shark.png',
+    className: '__se-sprite-shark',
+  }
+];
 
 const talkTime = 4000;
-
-// 1 фаза — улыбающийся серфер (25%)
-// 2 фаза — хмурый серфер (50%)
-// 3 фаза — злой серфер (25%)
 
 const storageUpdateTime = 5000;
 const stickerVisibleTime = 5000;
@@ -92,163 +121,50 @@ const setImage = (url, className, oldClassName) => {
   if (oldClassName) {
     sprite.classList.remove(oldClassName);
   }
-}
+};
 
-const firstPhase = () => {
+const phasesCycle = () => {
+  index += 1;
+
+  const currentIndex = index;
+  const phase = phases[index];
+
   setImage(
-    'assets/images/serf-1-happy.png',
-    '__se-sprite-happy',
+    phase.image,
+    phase.className,
+    index > 0 ? phases[index - 1].transitionClassName : null,
   );
 
+  if (!phase.time) {
+    return;
+  }
+
   const interval = setInterval(() => {
-    if (phase > 0) {
+    if (index > currentIndex) {
       clearInterval(interval);
       return;
     }
 
-    setImage(
-      'assets/images/serf-2-happy-talk.png',
-      '__se-sprite-happy-talk',
-      '__se-sprite-happy',
-    );
-
-    showSticker('Сёрфер радостный');
+    setImage(phase.talkImage, phase.talkClassName, phase.className);
+    showSticker(phase.text);
 
     setTimeout(() => {
-      if (phase > 0) {
+      if (index > currentIndex) {
         clearInterval(interval);
         return;
       }
 
-      setImage(
-        'assets/images/serf-1-happy.png',
-        '__se-sprite-happy',
-        '__se-sprite-happy-talk',
-      );
+      setImage(phase.image, phase.className, phase.talkClassName);
     }, stickerVisibleTime);
   }, talkTime + stickerVisibleTime);
 
   setTimeout(() => {
     clearInterval(interval);
 
-    setImage(
-      'assets/images/serf-3-happy-transition.png',
-      '__se-sprite-happy-transition',
-      '__se-sprite-happy',
-    );
+    setImage(phase.transitionImage, phase.transitionClassName, phase.className);
 
-    setTimeout(secondPhase, 1000);
-  }, times[phase]);
-};
-
-const secondPhase = () => {
-  phase += 1;
-
-  setImage(
-    'assets/images/serf-4-concerned.png',
-    '__se-sprite-conserned',
-    '__se-sprite-happy-transition',
-  );
-
-  const interval = setInterval(() => {
-    if (phase > 1) {
-      clearInterval(interval);
-      return;
-    }
-
-    setImage(
-      'assets/images/serf-5-concerned-talk.png',
-      '__se-sprite-concerned-talk',
-      '__se-sprite-conserned',
-    );
-
-    showSticker('Сёрфер растроен');
-
-    setTimeout(() => {
-      if (phase > 1) {
-        clearInterval(interval);
-        return;
-      }
-
-      setImage(
-        'assets/images/serf-4-concerned.png',
-        '__se-sprite-conserned',
-        '__se-sprite-concerned-talk',
-      );
-    }, stickerVisibleTime);
-  }, talkTime + stickerVisibleTime);
-
-  setTimeout(() => {
-    clearInterval(interval);
-
-    setImage(
-      'assets/images/serf-6-concerned-transition.png',
-      '__se-sprite-conserned-transition',
-      '__se-sprite-conserned',
-    );
-
-    setTimeout(thirdPhase, 1000);
-  }, times[phase]);
-};
-
-const thirdPhase = () => {
-  phase += 1;
-
-  setImage(
-    'assets/images/serf-7-sad.png',
-    '__se-sprite-sad',
-    '__se-sprite-conserned-transition',
-  );
-
-  const interval = setInterval(() => {
-    if (phase > 2) {
-      clearInterval(interval);
-      return;
-    }
-
-    setImage(
-      'assets/images/serf-8-sad-talk.png',
-      '__se-sprite-sad-talk',
-      '__se-sprite-sad',
-    );
-
-    showSticker('Сёрфер злится');
-
-    setTimeout(() => {
-      if (phase > 2) {
-        clearInterval(interval);
-        return;
-      }
-
-      setImage(
-        'assets/images/serf-7-sad.png',
-        '__se-sprite-sad',
-        '__se-sprite-sad-talk',
-      );
-    }, stickerVisibleTime);
-  }, talkTime + stickerVisibleTime);
-
-  setTimeout(() => {
-    clearInterval(interval);
-
-    setImage(
-      'assets/images/serf-9-sad-transition.png',
-      '__se-sprite-sad-transition',
-      '__se-sprite-sad',
-    );
-
-    setTimeout(forthPhase, 2000);
-  }, times[phase]);
-};
-
-const forthPhase = () => {
-  phase += 1;
-
-  setImage(
-    'assets/images/serf-10-shark.png',
-    '__se-sprite-shark',
-    '__se-sprite-sad-transition',
-  );
+    setTimeout(phasesCycle, 1000);
+  }, phase.time);
 };
 
 // start calculating scroll
@@ -260,4 +176,4 @@ window.addEventListener('beforeunload', onUnload, true);
 renderResources();
 
 // start the phases
-firstPhase();
+phasesCycle();
