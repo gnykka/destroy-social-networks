@@ -37,7 +37,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         timeLimit = items.timeLimit || 10;
         displayBadSites();
             for (let i = 0; i<timeLimitRadios.length; i++) {
-      console.log(timeLimitRadios[i].value+' vs. '+timeLimit);
       if (timeLimitRadios[i].value==timeLimit) {
         timeLimitRadios[i].checked = true;
       }

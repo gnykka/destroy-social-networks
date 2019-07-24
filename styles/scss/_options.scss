@@ -34,7 +34,10 @@
         cursor: pointer;
 
         &-body {
-            padding: 24px 36px;
+            padding: 24px 36px 0;
+                            &-description {
+                    margin: 10px 0 0 36px;
+                }
 
             &-main {
                 display: flex;
@@ -42,11 +45,13 @@
 
                 &-title.__se-title {
                     font-size: 48px;
+                    text-align: center;
                     margin-bottom: 18px !important;
                 }
             }
 
             &-description {
+                text-align: left;
                 position: relative;
                 width: 100px;
                 display: block;
@@ -91,21 +96,23 @@
 
 
         &-open {
-            overflow: scroll;
+            overflow: visible;
             position: absolute;
             top: 280px;
             width: 800px;
             cursor: inherit;
             transform: rotateX(0);
-            border-radius: 0px;
+            border-radius: 6px;
             min-height: 100vh;
             order: 4 !important;
             transform: perspective(0) rotateX(0) scale(1);
             z-index: 10;
             transition: 1s;
+            height: auto;
         }
 
         &-settings {
+            text-align: center;
             .__se-title {
                 margin: 48px 0 0px;
             }
@@ -140,7 +147,7 @@
                             width: 80px;
                             height: 80px;
                             background-color: white;
-                            box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.20);
+                            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.20);
                             border-radius: 10px;
                             &:hover {
                                 opacity: .5;
@@ -170,19 +177,54 @@
         }
 
         &-analytics {
-            margin: 0 0 0 -24px;
+            margin: 0 0 120px -24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             .__se-svm {
                 display: flex;
 
-                .__se-tab-body-description {
-                    margin: 10px 0 0 36px;
+
+                svg {
+                    transform: scale(1.8);
+                    transform-origin: 0% 0%;
                 }
             }
 
-            svg {
-                transform: scale(1.8);
-                transform-origin: 0% 0%;
+            .__se-todays-left {
+                display: flex;
+                margin: 24px 0 88px 24px;
+                svg {
+                    transform: scale(1.2);
+                    transform-origin: 0% 0%;
+                }
+
+            }
+
+            .__se-counter {
+                margin: 180px 0 120px;
+                &-value {
+                    span {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .__se-tesla {
+                display: flex;
+                align-items: flex-end;
+                img {
+                    width: 360px;
+                }
+
+                span {
+                    display: block;
+                    position: relative;
+                    line-height: 1.5;
+                    margin: 0 0 0 36px;
+                    text-align: left;
+                }
             }
 
         }

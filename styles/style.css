@@ -50,14 +50,18 @@ body {
   transform: perspective(20px) rotateX(-1.5deg) scale(0.8);
   cursor: pointer; }
   .__se-tab-body {
-    padding: 24px 36px; }
+    padding: 24px 36px 0; }
+    .__se-tab-body-description {
+      margin: 10px 0 0 36px; }
     .__se-tab-body-main {
       display: flex;
       flex-direction: column; }
       .__se-tab-body-main-title.__se-title {
         font-size: 48px;
+        text-align: center;
         margin-bottom: 18px !important; }
     .__se-tab-body-description {
+      text-align: left;
       position: relative;
       width: 100px;
       display: block;
@@ -87,71 +91,96 @@ body {
   .__se-tab#analytics {
     background: #48C7FF; }
   .__se-tab-open {
-    overflow: scroll;
+    overflow: visible;
     position: absolute;
     top: 280px;
     width: 800px;
     cursor: inherit;
     transform: rotateX(0);
-    border-radius: 0px;
+    border-radius: 6px;
     min-height: 100vh;
     order: 4 !important;
     transform: perspective(0) rotateX(0) scale(1);
     z-index: 10;
-    transition: 1s; }
-  .__se-tab-settings .__se-title {
-    margin: 48px 0 0px; }
-  .__se-tab-settings-allowed-time label {
-    font-size: 14px;
-    margin-right: 18px; }
-  .__se-tab-settings-bad-sites {
-    margin: 18px 0; }
-    .__se-tab-settings-bad-sites-pseudoTextArea {
-      background: #FF0000;
-      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-      border: 0px;
-      border-radius: 10px;
-      font-size: 24px;
-      font-weight: 200;
-      height: 400px;
-      width: 640px;
-      display: flex;
-      align-items: flex-start;
-      padding: 24px; }
-      .__se-tab-settings-bad-sites-pseudoTextArea-stoplist {
-        display: flex; }
-        .__se-tab-settings-bad-sites-pseudoTextArea-stoplist img {
-          margin-right: 20px;
-          width: 80px;
-          height: 80px;
-          background-color: white;
-          box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.2);
-          border-radius: 10px; }
-          .__se-tab-settings-bad-sites-pseudoTextArea-stoplist img:hover {
-            opacity: .5;
-            transform: scale(0.9);
-            transition: .4s;
-            cursor: pointer; }
-      .__se-tab-settings-bad-sites-pseudoTextArea input {
-        height: fit-content;
+    transition: 1s;
+    height: auto; }
+  .__se-tab-settings {
+    text-align: center; }
+    .__se-tab-settings .__se-title {
+      margin: 48px 0 0px; }
+    .__se-tab-settings-allowed-time label {
+      font-size: 14px;
+      margin-right: 18px; }
+    .__se-tab-settings-bad-sites {
+      margin: 18px 0; }
+      .__se-tab-settings-bad-sites-pseudoTextArea {
+        background: #FF0000;
+        box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
         border: 0px;
-        font-size: 48px;
-        color: white;
-        background: none;
+        border-radius: 10px;
+        font-size: 24px;
         font-weight: 200;
-        margin-top: 9px;
-        width: auto; }
-        .__se-tab-settings-bad-sites-pseudoTextArea input:focus {
-          outline: none; }
+        height: 400px;
+        width: 640px;
+        display: flex;
+        align-items: flex-start;
+        padding: 24px; }
+        .__se-tab-settings-bad-sites-pseudoTextArea-stoplist {
+          display: flex; }
+          .__se-tab-settings-bad-sites-pseudoTextArea-stoplist img {
+            margin-right: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px; }
+            .__se-tab-settings-bad-sites-pseudoTextArea-stoplist img:hover {
+              opacity: .5;
+              transform: scale(0.9);
+              transition: .4s;
+              cursor: pointer; }
+        .__se-tab-settings-bad-sites-pseudoTextArea input {
+          height: fit-content;
+          border: 0px;
+          font-size: 48px;
+          color: white;
+          background: none;
+          font-weight: 200;
+          margin-top: 9px;
+          width: auto; }
+          .__se-tab-settings-bad-sites-pseudoTextArea input:focus {
+            outline: none; }
   .__se-tab-analytics {
-    margin: 0 0 0 -24px; }
+    margin: 0 0 120px -24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     .__se-tab-analytics .__se-svm {
       display: flex; }
-      .__se-tab-analytics .__se-svm .__se-tab-body-description {
-        margin: 10px 0 0 36px; }
-    .__se-tab-analytics svg {
-      transform: scale(1.8);
-      transform-origin: 0% 0%; }
+      .__se-tab-analytics .__se-svm svg {
+        transform: scale(1.8);
+        transform-origin: 0% 0%; }
+    .__se-tab-analytics .__se-todays-left {
+      display: flex;
+      margin: 24px 0 88px 24px; }
+      .__se-tab-analytics .__se-todays-left svg {
+        transform: scale(1.2);
+        transform-origin: 0% 0%; }
+    .__se-tab-analytics .__se-counter {
+      margin: 180px 0 120px; }
+      .__se-tab-analytics .__se-counter-value span {
+        font-size: 32px; }
+    .__se-tab-analytics .__se-tesla {
+      display: flex;
+      align-items: flex-end; }
+      .__se-tab-analytics .__se-tesla img {
+        width: 360px; }
+      .__se-tab-analytics .__se-tesla span {
+        display: block;
+        position: relative;
+        line-height: 1.5;
+        margin: 0 0 0 36px;
+        text-align: left; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif; }
