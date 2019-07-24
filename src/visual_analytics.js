@@ -47,7 +47,7 @@ const setTodaysTheSun = () => {
 };
 
 const setTodaysLoose = () => {
-  document.querySelector('.__se-counter-value-time').textContent = spentToday.time+'мин';
+  document.querySelector('.__se-counter-value-time').textContent = spentToday.time+' мин.';
   document.querySelector('.__se-counter-value-scroll').textContent = spentToday.scroll+'м';
 }
 

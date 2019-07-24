@@ -50,7 +50,7 @@ body {
   transform: perspective(20px) rotateX(-1.5deg) scale(0.8);
   cursor: pointer; }
   .__se-tab-body {
-    padding: 24px 36px; }
+    padding: 24px 36px 0; }
     .__se-tab-body-description {
       margin: 10px 0 0 36px; }
     .__se-tab-body-main {
@@ -96,7 +96,7 @@ body {
     width: 800px;
     cursor: inherit;
     transform: rotateX(0);
-    border-radius: 0px;
+    border-radius: 6px;
     min-height: 100vh;
     order: 4 !important;
     transform: perspective(0) rotateX(0) scale(1);
@@ -131,7 +131,7 @@ body {
             width: 80px;
             height: 80px;
             background-color: white;
-            box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
             border-radius: 10px; }
             .__se-tab-settings-bad-sites-pseudoTextArea-stoplist img:hover {
               opacity: .5;
@@ -165,6 +165,20 @@ body {
       .__se-tab-analytics .__se-todays-left svg {
         transform: scale(1.2);
         transform-origin: 0% 0%; }
+    .__se-tab-analytics .__se-counter {
+      margin: 180px 0 120px; }
+      .__se-tab-analytics .__se-counter-value span {
+        font-size: 32px; }
+    .__se-tab-analytics .__se-tesla {
+      display: flex;
+      align-items: flex-end; }
+      .__se-tab-analytics .__se-tesla img {
+        width: 360px; }
+      .__se-tab-analytics .__se-tesla span {
+        display: block;
+        position: relative;
+        line-height: 1.5;
+        margin: 0 0 0 36px; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif; }
