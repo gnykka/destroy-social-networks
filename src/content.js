@@ -41,39 +41,49 @@ const stickerVisibleTime = 5000;
 
 let sticker, sprite;
 
-let today = new Date();
-let dateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
-
 // get scroll and time values
 let scroll, fullScroll;
 let time, fullTime;
+let lastDate;
+let now = new Date();
 let prevScrollTop = 0;
-let prevTime = today.getTime();
 
-chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime'], (items) => {
+chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate'], (items) => {
   scroll = items.scroll || 0;
   fullScroll = items.fullScroll || 0;
   time = items.time || 0;
   fullTime = items.fullTime || 0;
+  lastDate = items.lastDate
+    ? new Date(items.lastDate)
+    : new Date(now.getFullYear(), now.getMonth(), now.getDate());
 });
 
 // write new values to storage
 const storageTimer = setInterval(() => {
-  today = new Date();
-  const nextDateTime = (new Date(today.getFullYear(), today.getMonth(), today.getDate())).getTime();
+  const current = now.getTime();
 
-  const delta = today.getTime() - prevTime;
+  now = new Date();
+
+  const delta = now.getTime() - current;
+
   time += delta;
   fullTime += delta;
-  prevTime = today.getTime();
 
-  if (nextDateTime > dateTime) {
+  const date = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  if (date > lastDate) {
     scroll = 0;
     time = 0;
-    dateTime = nextDateTime;
+    lastDate = date;
   }
 
-  chrome.storage.sync.set({ scroll, fullScroll, time, fullTime });
+  console.log(scroll, fullScroll, time, fullTime, lastDate);
+
+  chrome.storage.sync.set({
+    scroll, fullScroll,
+    time, fullTime,
+    lastDate: lastDate.getTime(),
+  });
 }, storageUpdateTime);
 
 const onScroll = debounce((event) => {
