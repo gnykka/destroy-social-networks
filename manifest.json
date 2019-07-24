@@ -11,7 +11,7 @@
   "content_scripts": [{
     "js": ["src/utils.js", "src/content.js"],
     "css": ["styles/content.css"],
-    "matches": ["*://www.facebook.com/*"]
+    "matches": ["*://www.facebook.com/*", "*://i.olsh.me/*"]
   }],
   "web_accessible_resources": ["*.png"],
    "browser_action": {
