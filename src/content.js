@@ -1,13 +1,14 @@
 let phase = 0;
-const times = [2000, 4000, 2000]; // in ms
+const times = [20000, 40000, 20000]; // in ms
+
+const talkTime = 4000;
 
 // 1 фаза — улыбающийся серфер (25%)
 // 2 фаза — хмурый серфер (50%)
 // 3 фаза — злой серфер (25%)
 
 const storageUpdateTime = 5000;
-const stickerVisibleTime = 2000;
-const toasterAnimationTime = 500;
+const stickerVisibleTime = 5000;
 
 let sticker, sprite;
 
@@ -77,27 +78,64 @@ const showSticker = (text) => {
   sticker.innerText = text;
   sticker.classList.add('visible');
 
-  setTimeout(() => { sticker.classList.remove('visible'); }, stickerVisibleTime);
+  setTimeout(() => {
+    sticker.classList.remove('visible');
+  }, stickerVisibleTime);
 };
 
+const setImage = (url, className, oldClassName) => {
+  const image = chrome.extension.getURL(url);
+
+  sprite.style['background-image'] = `url('${image}')`;
+  sprite.classList.add(className);
+
+  if (oldClassName) {
+    sprite.classList.remove(oldClassName);
+  }
+}
+
 const firstPhase = () => {
-  showSticker('Сёрфер радостный');
+  setImage(
+    'assets/images/serf-1-happy.png',
+    '__se-sprite-happy',
+  );
 
-  const image = chrome.extension.getURL('assets/images/serf-1-happy.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-happy');
+  const interval = setInterval(() => {
+    if (phase > 0) {
+      clearInterval(interval);
+      return;
+    }
 
-  /*
-  const image = chrome.extension.getURL('assets/images/serf-2-happy-talk.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-happy-talk');
-  */
+    setImage(
+      'assets/images/serf-2-happy-talk.png',
+      '__se-sprite-happy-talk',
+      '__se-sprite-happy',
+    );
+
+    showSticker('Сёрфер радостный');
+
+    setTimeout(() => {
+      if (phase > 0) {
+        clearInterval(interval);
+        return;
+      }
+
+      setImage(
+        'assets/images/serf-1-happy.png',
+        '__se-sprite-happy',
+        '__se-sprite-happy-talk',
+      );
+    }, stickerVisibleTime);
+  }, talkTime + stickerVisibleTime);
 
   setTimeout(() => {
-    const image = chrome.extension.getURL('assets/images/serf-3-happy-transition.png');
-    sprite.style['background-image'] = `url('${image}')`;
-    sprite.classList.add('__se-sprite-happy-transition');
-    sprite.classList.remove('__se-sprite-happy');
+    clearInterval(interval);
+
+    setImage(
+      'assets/images/serf-3-happy-transition.png',
+      '__se-sprite-happy-transition',
+      '__se-sprite-happy',
+    );
 
     setTimeout(secondPhase, 1000);
   }, times[phase]);
@@ -105,24 +143,49 @@ const firstPhase = () => {
 
 const secondPhase = () => {
   phase += 1;
-  showSticker('Сёрфер растроен');
 
-  const image = chrome.extension.getURL('assets/images/serf-4-concerned.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-conserned');
-  sprite.classList.remove('__se-sprite-happy-transition');
+  setImage(
+    'assets/images/serf-4-concerned.png',
+    '__se-sprite-conserned',
+    '__se-sprite-happy-transition',
+  );
 
-  /*
-  const image = chrome.extension.getURL('assets/images/serf-5-concerned-talk.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-conserned-talk');
-  */
+  const interval = setInterval(() => {
+    if (phase > 1) {
+      clearInterval(interval);
+      return;
+    }
+
+    setImage(
+      'assets/images/serf-5-concerned-talk.png',
+      '__se-sprite-concerned-talk',
+      '__se-sprite-conserned',
+    );
+
+    showSticker('Сёрфер растроен');
+
+    setTimeout(() => {
+      if (phase > 1) {
+        clearInterval(interval);
+        return;
+      }
+
+      setImage(
+        'assets/images/serf-4-concerned.png',
+        '__se-sprite-conserned',
+        '__se-sprite-concerned-talk',
+      );
+    }, stickerVisibleTime);
+  }, talkTime + stickerVisibleTime);
 
   setTimeout(() => {
-    const image = chrome.extension.getURL('assets/images/serf-6-concerned-transition.png');
-    sprite.style['background-image'] = `url('${image}')`;
-    sprite.classList.add('__se-sprite-concerned-transition');
-    sprite.classList.remove('__se-sprite-conserned');
+    clearInterval(interval);
+
+    setImage(
+      'assets/images/serf-6-concerned-transition.png',
+      '__se-sprite-conserned-transition',
+      '__se-sprite-conserned',
+    );
 
     setTimeout(thirdPhase, 1000);
   }, times[phase]);
@@ -130,24 +193,49 @@ const secondPhase = () => {
 
 const thirdPhase = () => {
   phase += 1;
-  showSticker('Сёрфер злится');
 
-  const image = chrome.extension.getURL('assets/images/serf-7-sad.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-sad');
-  sprite.classList.remove('__se-sprite-concerned-transition');
+  setImage(
+    'assets/images/serf-7-sad.png',
+    '__se-sprite-sad',
+    '__se-sprite-conserned-transition',
+  );
 
-  /*
-  const image = chrome.extension.getURL('assets/images/serf-8-sad-talk.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-sad-talk');
-  */
+  const interval = setInterval(() => {
+    if (phase > 2) {
+      clearInterval(interval);
+      return;
+    }
+
+    setImage(
+      'assets/images/serf-8-sad-talk.png',
+      '__se-sprite-sad-talk',
+      '__se-sprite-sad',
+    );
+
+    showSticker('Сёрфер злится');
+
+    setTimeout(() => {
+      if (phase > 2) {
+        clearInterval(interval);
+        return;
+      }
+
+      setImage(
+        'assets/images/serf-7-sad.png',
+        '__se-sprite-sad',
+        '__se-sprite-sad-talk',
+      );
+    }, stickerVisibleTime);
+  }, talkTime + stickerVisibleTime);
 
   setTimeout(() => {
-    const image = chrome.extension.getURL('assets/images/serf-9-sad-transition.png');
-    sprite.style['background-image'] = `url('${image}')`;
-    sprite.classList.add('__se-sprite-sad-transition');
-    sprite.classList.remove('__se-sprite-sad');
+    clearInterval(interval);
+
+    setImage(
+      'assets/images/serf-9-sad-transition.png',
+      '__se-sprite-sad-transition',
+      '__se-sprite-sad',
+    );
 
     setTimeout(forthPhase, 2000);
   }, times[phase]);
@@ -155,12 +243,12 @@ const thirdPhase = () => {
 
 const forthPhase = () => {
   phase += 1;
-  showSticker('Сёрфер стал акулой');
 
-  const image = chrome.extension.getURL('assets/images/serf-10-shark.png');
-  sprite.style['background-image'] = `url('${image}')`;
-  sprite.classList.add('__se-sprite-shark');
-  sprite.classList.remove('__se-sprite-sad-transition');
+  setImage(
+    'assets/images/serf-10-shark.png',
+    '__se-sprite-shark',
+    '__se-sprite-sad-transition',
+  );
 };
 
 // start calculating scroll
