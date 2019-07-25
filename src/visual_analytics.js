@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   chrome.storage.sync.get(['time', 'scroll', 'fullTime', 'fullScroll', 'timeLimit'], (items) => {
     spentToday.time = Math.round((items.time || 0) / msInMin);
     spentToday.scroll = Math.round((items.scroll || 0) / pxInM);
-    dailyNorm = items.timeLimit || 15;
+    dailyNorm = items.timeLimit || 4;
 
     svmSetPointer();
     setTodaysTheSun();

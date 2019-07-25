@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     chrome.storage.sync.get(['badSites', 'timeLimit'], (items) => {
         badSites = items.badSites || [];
-        timeLimit = items.timeLimit || 15;
+        timeLimit = items.timeLimit || 4;
         displayBadSites();
             for (let i = 0; i<timeLimitRadios.length; i++) {
       if (timeLimitRadios[i].value==timeLimit) {

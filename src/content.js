@@ -1,7 +1,7 @@
 let phaseIndex = -1;
 let phaseTimes = [];
 
-const talkTime = 3 * 60 * 1000; // 3 minutes
+let talkTime = 2 * 60 * 1000; // 1 minutes
 
 const storageUpdateTime = 5000;
 const stickerVisibleTime = 6000;
@@ -24,8 +24,10 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate',
     ? new Date(items.lastDate)
     : new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  const limit = (items.timeLimit || 15) * 60 * 1000;
+  const limit = (items.timeLimit || 4) * 60 * 1000;
   phaseTimes = [limit * 0.25, limit * 0.5, limit * 0.25];
+
+  talkTime = limit === 4 * 60 * 1000 ? 16000 : 1 * 60 * 1000; // 1 minutes
 
   if (time < phaseTimes[0]) {
     phaseIndex = -1;
@@ -64,8 +66,6 @@ const storageTimer = setInterval(() => {
     time = 0;
     lastDate = date;
   }
-
-  console.log(scroll, fullScroll, time, fullTime, lastDate);
 
   chrome.storage.sync.set({
     scroll, fullScroll,
@@ -155,7 +155,7 @@ const phasesCycle = () => {
 
       setImage(phase.image, phase.className, phase.talkClassName);
     }, stickerVisibleTime);
-  }, talkTime + stickerVisibleTime);
+  }, talkTime);
 
   setTimeout(() => {
     clearInterval(interval);
