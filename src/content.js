@@ -1,9 +1,10 @@
 let phaseIndex = -1;
+let phaseTimes = [];
 
-const talkTime = 4000;
+const talkTime = 3 * 60 * 1000; // 3 minutes
 
 const storageUpdateTime = 5000;
-const stickerVisibleTime = 5000;
+const stickerVisibleTime = 6000;
 
 let sticker, sprite;
 
@@ -14,7 +15,7 @@ let lastDate;
 let now = new Date();
 let prevScrollTop = 0;
 
-chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate'], (items) => {
+chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate', 'timeLimit'], (items) => {
   scroll = items.scroll || 0;
   fullScroll = items.fullScroll || 0;
   time = items.time || 0;
@@ -22,6 +23,27 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate']
   lastDate = items.lastDate
     ? new Date(items.lastDate)
     : new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  const limit = (items.timeLimit || 15) * 60 * 1000;
+  phaseTimes = [limit * 0.25, limit * 0.5, limit * 0.25];
+
+  if (time < phaseTimes[0]) {
+    phaseIndex = -1;
+    phaseTimes[0] -= time;
+  } else if (time < phaseTimes[0] + phaseTimes[1]) {
+    phaseIndex = 0;
+    phaseTimes[1] -= (time - phaseTimes[0]);
+  } else if (time < phaseTimes[0] + phaseTimes[1] + phaseTimes[2]) {
+    phaseIndex = 1;
+    phaseTimes[2] -= (time - phaseTimes[0] - phaseTimes[1]);
+  } else {
+    phaseIndex = 2;
+  }
+
+  // create stickers and serfer
+  renderResources();
+  // start the phases
+  phasesCycle();
 });
 
 // write new values to storage
@@ -111,7 +133,7 @@ const phasesCycle = () => {
     phaseIndex > 0 ? phases[phaseIndex - 1].transitionClassName : null,
   );
 
-  if (!phase.time) {
+  if (phaseIndex === phaseTimes.length) {
     showSticker(texts[phaseIndex][Math.round(Math.random() * (texts[phaseIndex].length - 1))]);
     return;
   }
@@ -141,16 +163,10 @@ const phasesCycle = () => {
     setImage(phase.transitionImage, phase.transitionClassName, phase.className);
 
     setTimeout(phasesCycle, 1000);
-  }, phase.time);
+  }, phaseTimes[phaseIndex]);
 };
 
 // start calculating scroll
 window.addEventListener('scroll', onScroll, true);
 // remove interval before unload
 window.addEventListener('beforeunload', onUnload, true);
-
-// create stickers and serfer
-renderResources();
-
-// start the phases
-phasesCycle();

@@ -61,7 +61,6 @@ const texts = [
 
 const phases = [
   {
-    time: 20000,
     image: 'assets/images/serf-1-happy.png',
     className: '__se-sprite-happy',
     talkImage: 'assets/images/serf-2-happy-talk.png',
@@ -69,7 +68,6 @@ const phases = [
     transitionImage: 'assets/images/serf-3-happy-transition.png',
     transitionClassName: '__se-sprite-happy-transition',
   }, {
-    time: 40000,
     image: 'assets/images/serf-4-concerned.png',
     className: '__se-sprite-conserned',
     talkImage: 'assets/images/serf-5-concerned-talk.png',
@@ -77,7 +75,6 @@ const phases = [
     transitionImage: 'assets/images/serf-6-concerned-transition.png',
     transitionClassName: '__se-sprite-conserned-transition',
   }, {
-    time: 20000,
     image: 'assets/images/serf-7-sad.png',
     className: '__se-sprite-sad',
     talkImage: 'assets/images/serf-8-sad-talk.png',

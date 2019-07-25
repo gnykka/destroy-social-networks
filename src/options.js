@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     [...tabs].forEach((tab, index) => {
         tab.addEventListener('click', () => { changeTab(index); });
     });
-   
+
 });
 
 const changeTab = (index) => {
@@ -22,7 +22,7 @@ const changeTab = (index) => {
 
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - // S E T T I N G S 
+// - - - - - - - - - - - - - - - - - - - - - - - // S E T T I N G S
 
 
 
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     chrome.storage.sync.get(['badSites', 'timeLimit'], (items) => {
         badSites = items.badSites || [];
-        timeLimit = items.timeLimit || 10;
+        timeLimit = items.timeLimit || 15;
         displayBadSites();
             for (let i = 0; i<timeLimitRadios.length; i++) {
       if (timeLimitRadios[i].value==timeLimit) {
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
     }
     }, )
-   
+
 });
 
 // - - - - - - - - - - - - - // time limit
