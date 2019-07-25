@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Scroll Extension Example",
+  "name": "Antiprocrastinate!",
   "options_page": "options.html",
-  "version": "0.0.1",
-  "description": "It's a first simple version",
+  "version": "1.0.0",
+  "description": "Helps you to stop procrastinating in social media",
   "permissions": ["tabs", "storage"],
   "icons": {
     "128": "assets/images/logo.png"

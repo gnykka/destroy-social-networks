@@ -9,6 +9,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         tab.addEventListener('click', () => { changeTab(index); });
     });
 
+    const now = new Date();
+    document.querySelector('.__se-options-time').innerText = `${now.getHours()}:${now.getMinutes()}`;
+    document.querySelector('.__se-options-date').innerText =
+        `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()}`;
+
 });
 
 const changeTab = (index) => {
