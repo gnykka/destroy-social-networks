@@ -1,15 +1,22 @@
 .__se-sticker {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   z-index: 1000000;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 18px;
+  bottom: 200px;
+  left: 160px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 20px;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 1.5;
-  font-family: 'Helvetica Nueu';
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe, Arial, sans-serif;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 300ms;
 }
