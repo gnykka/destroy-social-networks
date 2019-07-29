@@ -1,7 +1,7 @@
 let phaseIndex = -1;
 let phaseTimes = [];
 
-let talkTime = 2 * 60 * 1000; // 1 minutes
+let talkTime = 1 * 60 * 1000; // 1 minutes
 
 const storageUpdateTime = 5000;
 const stickerVisibleTime = 6000;

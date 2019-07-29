@@ -34,19 +34,20 @@ const changeTab = (index) => {
 let badSites = [];
 let timeLimit = 10;
 let timeLimitRadios = document.timeLimitForm.timeLimit;
+const defaultTimeLimit = 4;
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
     chrome.storage.sync.get(['badSites', 'timeLimit'], (items) => {
         badSites = items.badSites || [];
-        timeLimit = items.timeLimit || 4;
+        timeLimit = items.timeLimit || defaultTimeLimit;
         displayBadSites();
-            for (let i = 0; i<timeLimitRadios.length; i++) {
-      if (timeLimitRadios[i].value==timeLimit) {
+            for (let i = 0; i < timeLimitRadios.length; i++) {
+      if (timeLimitRadios[i].value === timeLimit) {
         timeLimitRadios[i].checked = true;
       }
       timeLimitRadios[i].addEventListener('change', function() {
-        timeLimit=this.value;
+        timeLimit = this.value;
         chrome.storage.sync.set({ timeLimit });
       });
     }
