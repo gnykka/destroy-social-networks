@@ -24,6 +24,8 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate',
     ? new Date(items.lastDate)
     : new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
+  saveData();
+
   const limit = (items.timeLimit || 4) * 60 * 1000;
   phaseTimes = [limit * 0.25, limit * 0.5, limit * 0.25];
 
@@ -49,7 +51,7 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate',
 });
 
 // write new values to storage
-const storageTimer = setInterval(() => {
+const saveData = () => {
   const current = now.getTime();
 
   now = new Date();
@@ -72,7 +74,8 @@ const storageTimer = setInterval(() => {
     time, fullTime,
     lastDate: lastDate.getTime(),
   });
-}, storageUpdateTime);
+};
+const storageTimer = setInterval(saveData, storageUpdateTime);
 
 const onScroll = debounce((event) => {
   const { scrollTop } = event.target.scrollingElement;
