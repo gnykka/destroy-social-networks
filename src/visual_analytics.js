@@ -1,6 +1,6 @@
 let dailyNorm = 60;
 const pxInM = 3800;
-const defaultTimeLimit = 4;
+const defaultTimeLimit = 15;
 const msInMin = 1000 * 60; // ms * sec
 
 let spentToday = {
@@ -44,22 +44,10 @@ const setTodaysTheSun = () => {
     todaysLeftMins = 0;
   }
   todaysTheSun.style['transform'] = `translateY(${sunPosition}px)`;
-  document.querySelector('#todays-left-value').textContent = `${todaysLeftMins} мин`;
+  document.querySelector('#todays-left-value').textContent = `${todaysLeftMins} минут`;
 };
 
 const setTodaysLoose = () => {
-  document.querySelector('.__se-counter-value-time').textContent = spentToday.time+' мин.';
-  document.querySelector('.__se-counter-value-scroll').textContent = spentToday.scroll+'м';
+  document.querySelector('.__se-counter-value-time').textContent = `${spentToday.time} минут`;
+  document.querySelector('.__se-counter-value-scroll').textContent = `${spentToday.scroll} метров`;
 }
-
-// function getDate() {
-//   var date = new Date();
-//   var hours = date.getHours();
-//   var minutes = date.getMinutes();
-//   var seconds = date.getSeconds();
-//   if(seconds < 10) {
-//     seconds = '0' + seconds;
-//   }
-//   document.getElementById('timedisplay').innerHTML = hours + ':' + minutes + ':' + seconds;
-// }
-// setInterval(getDate, 0);
