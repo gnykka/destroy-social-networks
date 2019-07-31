@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Antiprocrastinate!",
+  "name": "Scrollfer",
   "options_page": "options.html",
-  "version": "1.0.0",
-  "description": "Helps you to stop procrastinating in social media",
+  "version": "1.1.0",
+  "description": "Our Scrollfer helps you to stop procrastinating in social media and pushes yout to start working.",
   "permissions": ["tabs", "storage"],
   "icons": {
     "128": "assets/images/logo.png"
@@ -11,7 +11,10 @@
   "content_scripts": [{
     "js": ["src/utils.js", "src/mascot_data.js", "src/content.js"],
     "css": ["styles/content.css"],
-    "matches": ["*://www.facebook.com/*", "*://www.twitter.com/*"]
+    "matches": [
+      "*://www.facebook.com/*", "*://facebook.com/*",
+      "*://www.twitter.com/*", "*://twitter.com/*"
+    ]
   }],
   "web_accessible_resources": ["*.png"],
   "browser_action": {

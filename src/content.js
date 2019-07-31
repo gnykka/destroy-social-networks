@@ -1,12 +1,12 @@
 let phaseIndex = -1;
 let phaseTimes = [];
 
-let talkTime = 1 * 60 * 1000; // 1 minutes
-
+const talkTime = 3 * 60 * 1000; // 3 minutes
 const storageUpdateTime = 5000;
 const stickerVisibleTime = 6000;
 
 let sticker, sprite;
+let stickerTimeout;
 
 // get scroll and time values
 let scroll, fullScroll;
@@ -26,10 +26,8 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate',
 
   saveData();
 
-  const limit = (items.timeLimit || 4) * 60 * 1000;
+  const limit = (items.timeLimit || 15) * 60 * 1000;
   phaseTimes = [limit * 0.25, limit * 0.5, limit * 0.25];
-
-  talkTime = limit === 4 * 60 * 1000 ? 16000 : 1 * 60 * 1000; // 1 minutes
 
   if (time < phaseTimes[0]) {
     phaseIndex = -1;
@@ -48,6 +46,8 @@ chrome.storage.sync.get(['scroll', 'fullScroll', 'time', 'fullTime', 'lastDate',
   renderResources();
   // start the phases
   phasesCycle();
+  //say hello
+  talk(initText);
 });
 
 // write new values to storage
@@ -102,13 +102,18 @@ const renderResources = () => {
   sprite = document.createElement('div');
   sprite.className = '__se-sprite';
   document.body.appendChild(sprite);
+
+  sprite.addEventListener('click', () => {
+    talk(texts[phaseIndex][Math.round(Math.random() * (texts[phaseIndex].length - 1))]);
+  });
 }
 
 const showSticker = (text) => {
   sticker.innerText = text;
   sticker.classList.add('visible');
 
-  setTimeout(() => {
+  clearTimeout(stickerTimeout);
+  stickerTimeout = setTimeout(() => {
     sticker.classList.remove('visible');
   }, stickerVisibleTime);
 };
@@ -122,6 +127,17 @@ const setImage = (url, className, oldClassName) => {
   if (oldClassName) {
     sprite.classList.remove(oldClassName);
   }
+};
+
+const talk = (text) => {
+  const phase = phases[phaseIndex];
+
+  setImage(phase.talkImage, phase.talkClassName, phase.className);
+  showSticker(text);
+
+  setTimeout(() => {
+    setImage(phase.image, phase.className, phase.talkClassName);
+  }, stickerVisibleTime);
 };
 
 const phasesCycle = () => {

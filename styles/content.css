@@ -19,6 +19,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 300ms;
+  user-select: none;
 }
 
 .__se-sticker.visible {

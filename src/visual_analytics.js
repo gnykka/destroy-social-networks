@@ -44,7 +44,7 @@ const setTodaysTheSun = () => {
     todaysLeftMins = 0;
   }
   todaysTheSun.style['transform'] = `translateY(${sunPosition}px)`;
-  document.querySelector('#todays-left-value').textContent = `${todaysLeftMins} минут`;
+  document.querySelector('#todays-left-value').textContent = `${todaysLeftMins} мин`;
 };
 
 const setTodaysLoose = () => {
