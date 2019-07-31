@@ -9,12 +9,16 @@ body {
 }
 
 .container {
+    position: relative;
     width: fit-content;
     margin: 0 auto;
 }
 
-
-// - - - - - - - - - - - - - - - - - - - - - - - // S E T T I N G S 
-
-// - - - - - - - - - - - - - // slider 
-// - - - - - - - - - - - - - // slider 
+.__se-settings-icon {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

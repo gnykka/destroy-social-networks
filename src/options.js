@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   chrome.storage.sync.get(['timeLimit'], (items) => {
     timeLimit = items.timeLimit || defaultTimeLimit;
     timeLimitRadios.forEach((radio) => {
-      if (radio.value === timeLimit) {
+      if (parseInt(radio.value) === timeLimit) {
         radio.checked = true;
       }
       radio.addEventListener('change', (event) => {

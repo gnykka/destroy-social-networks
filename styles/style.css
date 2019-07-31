@@ -16,8 +16,19 @@ body {
   align-items: center; }
 
 .container {
+  position: relative;
   width: fit-content;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
+
+.__se-settings-icon {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
 .page-container {
   width: 800px;
